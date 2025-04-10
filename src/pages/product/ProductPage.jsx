@@ -1,9 +1,9 @@
 
-
-import Header from "../components/common/Header"
 import { Zap,Users,ShoppingBag,BarChart } from "lucide-react";
 import { motion  } from "framer-motion";
-import StatCard  from "../components/common/StatCard";
+
+import StatCard  from "../../components/common/StatCard";
+import Header from "../../components/common/Header";
 
 const ProductPage=()=>{
     
@@ -19,6 +19,7 @@ const ProductPage=()=>{
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
+          
           <StatCard
             name="Total Sales"
             icon={Zap}
@@ -57,4 +58,8 @@ const ProductPage=()=>{
 
 };
 
+
+
  export  default ProductPage;
+
+

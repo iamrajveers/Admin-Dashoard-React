@@ -1,24 +1,20 @@
-
 import { motion } from "framer-motion";
-import { Zap,Users,ShoppingBag,BarChart } from "lucide-react";
-import Header from "../components/common/Header"
-import StatCard  from "../components/common/StatCard";
+import { Zap, Users, ShoppingBag, BarChart } from "lucide-react";
+import Header from "../../components/common/Header";
+import StatCard from "../../components/common/StatCard";
 
-import SalesOverviewChart from "../components/overview/SalesOverviewChart";
+import SalesOverviewChart from "../../components/overview/SalesOverviewChart";
 
-import CategoryDistributionChart from "../components/overview/CategoryDistributionChart";
+import CategoryDistributionChart from "../../components/overview/CategoryDistributionChart";
 
-import SalesChannelChart from "../components/overview/SalesChannelChart";
-
-
+import SalesChannelChart from "../../components/overview/SalesChannelChart";
 
 const OverviewPage = () => {
   return (
     <div className="flex-1 overflow-auto relative z-10">
-      <Header title="Overview"/> 
+      <Header title="Overview" />
 
       <main className="max-w-7xl mx-auto py-6 px-4 lg:px-8">
-
         {/* STATS */}
         <motion.div
           className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8"
@@ -53,28 +49,21 @@ const OverviewPage = () => {
             value="12.5%"
             color="#10B981"
           />
-
         </motion.div>
-               
 
+        {/*  Charts */}
 
-               {/*  Charts */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <SalesOverviewChart />
+          <CategoryDistributionChart />
+        </div>
 
-               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-  <SalesOverviewChart />
-  <CategoryDistributionChart />
-</div>
-
-<div className="mt-8">
-  <SalesChannelChart />
-</div>
-
-
-
+        <div className="mt-8">
+          <SalesChannelChart />
+        </div>
       </main>
     </div>
   );
 };
-
 
 export default OverviewPage;
