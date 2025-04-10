@@ -6,6 +6,7 @@ import StatCard  from "../../components/common/StatCard";
 import Header from "../../components/common/Header";
 
 const ProductPage=()=>{
+  
     
     return(
         <div className="flex-1 overflow-auto relative z-10">
@@ -19,7 +20,7 @@ const ProductPage=()=>{
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          
+
           <StatCard
             name="Total Sales"
             icon={Zap}
@@ -57,8 +58,6 @@ const ProductPage=()=>{
     )
 
 };
-
-
 
  export  default ProductPage;
 

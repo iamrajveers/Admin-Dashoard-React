@@ -20,6 +20,7 @@ const UserDetails = () => {
     <div className="flex-1 overflow-auto relative z-10">
       <Header title={`Product Details - ID: ${id}`} />
   
+  
 
       <div className="p-6">
         <h2 className="text-2xl font-semibold mb-4">User Details</h2>
